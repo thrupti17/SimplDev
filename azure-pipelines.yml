@@ -9,7 +9,7 @@ trigger:
 jobs:
 - job: Linux
   pool:
-    vmImage: 'NewAgentForTesting '
+    $(SELF_HOSTED_AGENT_NAME): 'NewAgentForTesting '
   steps:
   - task: DotNetCoreInstaller@0
     inputs:
